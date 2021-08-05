@@ -1,0 +1,68 @@
+body{
+    background-color: black;
+}
+.text
+    {
+        font-size: 72px;
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+.cube{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin-top: 200px;
+    transform-style: preserve-3d;
+    perspective: 5000px;
+    transform: rotateX(25deg) rotateY(-25deg);
+    animation: spinning 5s infinite;
+}
+@keyframes spinning {
+    0% { transform: translateY(-5em) rotateX(0deg); 
+      }
+      25%{
+        transform: translateY(-5em) rotateY(90deg); 
+
+      }
+      50%{
+        transform: translateY(-5em) rotateX(180deg); 
+      }
+      75%{transform: translateY(-5em) rotateY(270deg); }
+    100%   { transform: translateY(-5em) rotateX(360deg); }
+  }
+.face{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transition: all 1s;
+    
+}
+.one{
+    background-color: pink;
+}
+
+.two{
+    background-color: rgb(180, 228, 158);
+    transform: rotateY(90deg) translateZ(-100px) translateX(-100px);
+}
+.three{
+    background-color: rgb(171, 209, 240);
+    transform: rotateY(90deg) translateZ(100px) translateX(-100px);
+}
+.four{
+    background-color: rgb(224, 235, 128);
+    transform: rotateX(90deg) translateZ(-100px) translateY(100px);
+}
+.five{
+    background-color: rgb(236, 88, 138);
+    transform: translateZ(200px);
+}
+
+.six{
+    background-color: rgb(175, 110, 228);
+    transform: rotateX(90deg) translateZ(100px)  translateY(100px);
+}
