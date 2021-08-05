@@ -2,7 +2,7 @@
     <head>
         <title>3d cube</title>
         <link rel="stylesheet" text="style/css" href="styles.css">
-        <link rel="stylesheet" text="style/css" href="cursor.scss">
+        <link rel="stylesheet" text="style/css" href="cursor.css">
         <link rel="script" href="cursor.js"/>
         <link
     rel="stylesheet"
@@ -14,7 +14,8 @@
             <div class="text">
                 3D CUBE
             </div>
-            <p>move your mouse</p>
+            
+
         <div class="cube animation rotateIn">
             <div class="face one animation rotateIn "></div>
             <div class="face two"></div>
@@ -23,6 +24,16 @@
             <div class="face five"></div>
             <div class="face six"></div>
 
-        </div></center>
+        </div>
+    </center>
+    <div class="cursor1"></div>
+            <div class="cursor2"></div>
+        <script>
+            var cursor1=document.querySelector(".cursor1");
+            var cursor2=document.querySelector(".cursor2");
+            document.addEventListener("mousemove",function(e){
+                cursor1.style.cssText=cursor2.style.cssText="left:"+e.clientX+"px; top:"+e.clientY+"px;";
+            })
+        </script>
     </body>
 </html>
